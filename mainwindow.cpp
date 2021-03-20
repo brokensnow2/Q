@@ -10,10 +10,12 @@ MainWindow::MainWindow(QWidget *parent)
 {
     MainWindow1 *window1=new MainWindow1();
     ui->setupUi(this);
+    //图标
     this->setWindowTitle("Demo");
     QPixmap pix;
     pix.load(":/2.png");
     this->setWindowIcon(QIcon(pix));
+    //登录界面,跳转另一窗口和关闭当前窗口
     connect(ui->pushButton,&QPushButton::clicked,[=]()->void
     {
         this->hide();
