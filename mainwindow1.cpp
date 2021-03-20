@@ -31,10 +31,11 @@ MainWindow1::MainWindow1(QWidget *parent) :
     QSlider *slider=new QSlider(this);
     slider->move(600,300);
     slider->setValue(0);
-    connect(slider,&QSlider::valueChanged,[laber](int _value)//括号中要接信号返回的类型值，void为空，不写。
+    connect(slider,&QSlider::valueChanged,[laber](int _value)//小括号中要接信号返回的类型值
     {
         laber->setFont(QFont("宋体",_value,10,1));
     });
+    //进度条略。。。。。。
 }
 
 MainWindow1::~MainWindow1()
